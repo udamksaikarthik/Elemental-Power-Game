@@ -1,4 +1,6 @@
 let userChoice = ''
+let userScore = 0
+let computerScore = 0
 
 const image_game_icon_id = document.getElementById('image_game_icon_id')
 
@@ -115,7 +117,7 @@ function commonAnimateComputerChoice(computerChoice){
             earth_com_bg_effect_id.classList.add('add')
             black_com_bg_effect_div_id.classList.add('fade')
             break
-        case ('Lightining'):
+        case ('Lightning'):
             lightning_com_bg_effect_id.classList.add('add')
             black_com_bg_effect_div_id.classList.add('fade')
             break
@@ -167,6 +169,10 @@ function rulesSlider(){
 
 const play_button_id = document.getElementById('play_button_id')
 
+const user_score_id = document.getElementById('user_score_id')
+
+const computer_score_id = document.getElementById('computer_score_id')
+
 const computer_choices = ['Fire','Water','Wind','Earth','Lightning']
 
 let count = 0;
@@ -186,22 +192,30 @@ function playGame(){
         }
         else if(userChoice === 'Fire' && computerChoice === 'Wind'){
             console.log('You Won')
+            userScore++;
         }
         else if(userChoice === 'Wind' && computerChoice === 'Lightning'){
             console.log('You Won')
+            userScore++;
         }
         else if(userChoice === 'Lightning' && computerChoice === 'Earth'){
             console.log('You Won')
+            userScore++;
         }
         else if(userChoice === 'Earth' && computerChoice === 'Water'){
             console.log('You Won')
+            userScore++;
         }
         else if(userChoice === 'Water' && computerChoice === 'Fire'){
             console.log('You Won')
+            userScore++;
         }else{
             console.log('Computer Won')
+            computerScore++
         }
         play_button_id.innerText = 'Play Again'
+        user_score_id.innerText = userScore
+        computer_score_id.innerText = computerScore
         count++;
     }else{
         removeUserChoice()
