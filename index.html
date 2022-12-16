@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main_body_container">
+
+        <div id="rules_container_div_id" class="rules_container_div">
+            <h3>Rules</h3>
+            <li>Fire is strong against Wind, but weak against Water</li>
+            <li>Water is strong against Fire, but weak against Earth</li>
+            <li>Wind is strong against Lightning, but weak against Fire</li>
+            <li>Earth is strong against Water, but weak against Lightning</li>
+            <li>Lightning is strong against Wind, but weak against Water</li>
+
+            <button id="rules_button_id" class="rules_exposed_slide rules_button" onclick="rulesSlider()">Close</button>
+        </div>
+
+
+        <div class="header_container">
+            <div class="icon_container">
+                <img id="image_game_icon_id" class="image_game_icon" src="Image/Icon.jpg" alt="#">
+            </div>
+            <div class="title_container">
+                <h3>Elemental Magic</h3>
+            </div>
+            <div class="rules_container" id="rules_container_id">
+                <button id="rules_button_id" class="rules_button" onclick="rulesSlider()">Rules</button>
+            </div>
+        </div>
+        <div class="score_container">
+            <div class="user_score_container">
+                <h4>User Score: <span id="user_score_id">0</span> </h4>
+            </div>
+            <div class="computer_score_container">
+                <h4>Computer Score: <span id="computer_score_id">0</span> </h4>
+            </div>
+        </div>
+        <div class="user_choices_container" id="user_choices_container_id">
+            <div class="select_your_choice_div">
+                <h3>Select your element...</h3>
+            </div>
+            <div class="choices_container">
+                <div class="choice_common_container">
+                    <div class="choice_common_1 choice_common_image_container"></div>
+                    <h5 class="choice_common_text_container">Fire</h5>
+                    <a onclick="userSelectedChoice('Fire')"></a>
+                </div>
+                <div class="choice_common_container">
+                    <div class="choice_common_2 choice_common_image_container"></div>
+                    <h5 class="choice_common_text_container">Water</h5>
+                    <a onclick="userSelectedChoice('Water')"></a>
+                </div>
+                <div class="choice_common_container">
+                    <div class="choice_common_3 choice_common_image_container"></div>
+                    <h5 class="choice_common_text_container">Wind</h5>
+                    <a onclick="userSelectedChoice('Wind')"></a>
+                </div>
+                <div class="choice_common_container">
+                    <div class="choice_common_4 choice_common_image_container"></div>
+                    <h5 class="choice_common_text_container">Earth</h5>
+                    <a onclick="userSelectedChoice('Earth')"></a>
+                </div>
+                <div class="choice_common_container">
+                    <div class="choice_common_5 choice_common_image_container"></div>
+                    <h5 class="choice_common_text_container">Lightining</h5>
+                    <a onclick="userSelectedChoice('Lightining')"></a>
+                </div>
+            </div>
+            <div class="selected_choice_container">
+                <div class="choice_common_container user_selected_choice_container">
+                    <div class="choice_common_image_container" id="user_selected_element_image_id"></div>
+                    <h5 class="choice_common_text_container"><span id="user_selected_element_name_id"></span></h5>
+                </div>
+            </div>
+            <div class="black_bg_effect_div" id="black_bg_effect_div_id"></div>
+            <div id="flame_bg_effect_id" class="flame_bg_effect effect_common_container"></div>
+            <div id="water_bg_effect_id" class="water_bg_effect effect_common_container"></div>
+            <div id="wind_bg_effect_id" class="wind_bg_effect effect_common_container"></div>
+            <div id="earth_bg_effect_id" class="earth_bg_effect effect_common_container"></div>
+            <div id="lightning_bg_effect_id" class="lightning_bg_effect effect_common_container"></div>
+        </div>
+        <div class="computer_choices_container">
+
+            
+            <div class="green_com_bg_effect_div"></div>
+
+            <div class="select_your_choice_div">
+                <h3>Computer Choice</h3>
+            </div>
+            <div class="computer_choices_rotation_container">
+                <div class="computer_choices_div">
+                    <div class="choice_common_1 computer_choice_common_1 choice_common_image_container"></div>
+                    <h5 class="computer_choice_common_1 choice_common_text_container">Fire</h5>
+                    <div class="choice_common_2 computer_choice_common_2 choice_common_image_container"></div>
+                    <h5 class="computer_choice_common_2 choice_common_text_container">Water</h5>
+                    <div class="choice_common_3 computer_choice_common_3 choice_common_image_container"></div>
+                    <h5 class="computer_choice_common_3 choice_common_text_container">Wind</h5>
+                    <div class="choice_common_4 computer_choice_common_4 choice_common_image_container"></div>
+                    <h5 class="computer_choice_common_4 choice_common_text_container">Earth</h5>
+                    <div class="choice_common_5 computer_choice_common_5 choice_common_image_container"></div>
+                    <h5 class="computer_choice_common_5 choice_common_text_container">Lightning</h5>
+                </div>
+            </div>
+
+            <div class="black_com_bg_effect_div" id="black_com_bg_effect_div_id"></div>
+            <div id="flame_com_bg_effect_id" class="flame_com_bg_effect effect_com_common_container"></div>
+            <div id="water_com_bg_effect_id" class="water_com_bg_effect effect_com_common_container"></div>
+            <div id="wind_com_bg_effect_id" class="wind_com_bg_effect effect_com_common_container"></div>
+            <div id="earth_com_bg_effect_id" class="earth_com_bg_effect effect_com_common_container"></div>
+            <div id="lightning_com_bg_effect_id" class="lightning_com_bg_effect effect_com_common_container"></div>
+            </div>
+        </div>
+
+        <div class="play_button">
+            <button id="play_button_id" class="rules_button" onclick="playGame()">Play</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

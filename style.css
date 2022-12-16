@@ -1,0 +1,536 @@
+@font-face {
+    font-family: "arigathoFont";
+    src: url('Fonts/ArigatouGozaimasu-1Gnqg.ttf');
+}
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    font-family: "arigathoFont";
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.main_body_container{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.header_container{
+    position: relative;
+    background-color: #EDF5E1;
+    height: 10%;
+    width: 100%;
+    z-index: 5;
+}
+.score_container{
+    position: relative;
+    background-color: #379683;
+    height: 5%;
+    width: 100%;
+    z-index: 5;
+}
+.user_choices_container{
+    position: relative;
+    background-color: #EDF5E1;
+    height: 50%;
+    width: 100%;
+}
+.computer_choices_container{
+    position: relative;
+    /* background-color: #379683; */
+    height: 30%;
+    width: 100%;
+    z-index: 10;
+}
+.play_button{ 
+    position: absolute;
+    background-color: #379683;
+    height: 5%;
+    width: 100%;
+    bottom: 0;
+    z-index: 20;
+}
+.icon_container{
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    left: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image_game_icon{
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    border-radius: 50%;
+}
+.title_container{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rules_container{
+    position: absolute;
+    height: 100%;
+    right: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.rules_button{
+    background-color: #F76C6C;
+    left: 0;
+    height: 95%;
+    width: 100%;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+}
+.user_score_container{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+.computer_score_container{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+}
+.select_your_choice_div{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.choices_container{
+    background-color: #05386b;
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.choice_common_container{
+    position: relative;
+    width: 18%;
+    height: 50%;
+    background-color: #EDF5E1;
+    border-radius: 5px;
+}
+.choice_common_1{
+    background: url('Image/flames.png');
+}
+.choice_common_2{
+    background: url('Image/wave.png');
+}
+.choice_common_3{
+    background: url('Image/wind.png');
+}
+.choice_common_4{
+    background: url('Image/earth.png');
+}
+.choice_common_5{
+    background: url('Image/lightning.png');
+}
+.choice_common_image_container.choice_user_flames{
+    background: url('Image/flames.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.choice_common_image_container.choice_user_waves{
+    background: url('Image/wave.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.choice_common_image_container.choice_user_wind{
+    background: url('Image/wind.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.choice_common_image_container.choice_user_earth{
+    background: url('Image/earth.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.choice_common_image_container.choice_user_lightning{
+    background: url('Image/lightning.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.choice_common_image_container{
+    position: absolute;
+    top: 0;
+    height: 80%;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.choice_common_text_container{
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+}
+.choice_common_container a{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+.selected_choice_container{
+    position: absolute;
+    top: 60%;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flame_bg_effect{
+    transform: translateY(100%);
+    background: url('Image/fireBG.png');
+}
+.water_bg_effect{
+    transform: translateY(100%);
+    /* background: url('Image/waterBG.png');
+     */
+     background: url('Image/waterBG2.png');
+}
+.wind_bg_effect{
+    transform: translateY(100%);
+    background: url('Image/windBG.png');
+}
+.earth_bg_effect{
+    transform: translateY(100%);
+    background: url('Image/earthBG.png');
+}
+.lightning_bg_effect{
+    transform: translateY(-100%);
+    background: url('Image/lightiningBG.png');
+}
+.flame_com_bg_effect{
+    background: url('Image/fireBG.png');
+}
+.water_com_bg_effect{
+    background: url('Image/waterBG2.png');
+}
+.wind_com_bg_effect{
+    background: url('Image/windBG.png');
+}
+.earth_com_bg_effect{
+    background: url('Image/earthBG.png');
+}
+.lightning_com_bg_effect{
+    background: url('Image/lightiningBG.png');
+}
+.effect_common_container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    transition: ease-in-out 0.5s;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background-size: contain;
+    opacity: 0.8;
+}
+.effect_com_common_container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    transition: ease-in-out 0.5s;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background-size: contain;
+    opacity: 0.8;
+    transform: translateY(100%);
+}
+.flame_bg_effect.add{
+    transform: translateY(0);
+}
+.water_bg_effect.add{
+    transform: translateY(0);
+}
+.wind_bg_effect.add{
+    transform: translateY(0);
+}
+.earth_bg_effect.add{
+    transform: translateY(0);
+}
+.lightning_bg_effect.add{
+    transform: translateY(0);
+}
+.black_bg_effect_div{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+.black_bg_effect_div.fade{
+    background-color: black;
+    opacity: 0.8;
+    z-index: 0;
+}
+.computer_choices_container .select_your_choice_div{
+    padding: 1em;
+}
+.computer_choices_rotation_container{
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    top: 10%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.computer_choices_div{
+    position: relative;
+    height: 50%;
+    width: 18%;
+    background-color: #EDF5E1;
+    border-radius: 5px;
+}
+.computer_choice_common_1{
+    animation: computer_choice_common_1 0.5s infinite;
+}
+.computer_choice_common_2{
+    animation: computer_choice_common_2 0.5s infinite;
+}
+.computer_choice_common_3{
+    animation: computer_choice_common_3 0.5s infinite;
+}
+.computer_choice_common_4{
+    animation: computer_choice_common_4 0.5s infinite;
+}
+.computer_choice_common_5{
+    animation: computer_choice_common_5 0.5s infinite;
+}
+.black_com_bg_effect_div.fade{
+    background-color: black;
+    opacity: 0.8;
+    z-index: 5;
+}
+
+@keyframes computer_choice_common_1 {
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes computer_choice_common_2 {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes computer_choice_common_3 {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes computer_choice_common_4 {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes computer_choice_common_5 {
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.user_selected_choice_container{
+    background-color: #379683;
+}
+.rules_container_div{
+    position: absolute;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: ease-in-out 0.5s;
+    z-index: 6;
+    padding: 1em;
+    background-color: #EDF5E1;
+}
+.rules_container_div h3{
+    font-weight: bold;
+}
+.rules_container_div.add{
+    transform: translateY(0);
+}
+.rules_exposed_slide{
+    font-weight: bold;
+}
+.computer_choice_div_shower{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: 5;
+    transform: translateY(100%);
+    transition: ease-in-out 0.5s;
+}
+.black_com_bg_effect_div{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.flame_com_bg_effect.add{
+    visibility: visible;
+    display: block;
+    transform: translateY(0);
+    z-index: 5;
+}
+.water_com_bg_effect.add{
+    visibility: visible;
+    display: block;
+    transform: translateY(0);
+    z-index: 5;
+}
+.wind_com_bg_effect.add{
+    visibility: visible;
+    display: block;
+    transform: translateY(0);
+    z-index: 5;
+}
+.earth_com_bg_effect.add{
+    visibility: visible;
+    display: block;
+    transform: translateY(0);
+    z-index: 5;
+}
+.lightning_com_bg_effect.add{
+    visibility: visible;
+    display: block;
+    transform: translateY(0);
+    z-index: 5;
+}
+.green_com_bg_effect_div{
+    background-color: #379683;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+@media screen and (max-width: 500px){
+    .choice_common_container h5{
+        font-size: 0.6em;
+    }
+    .effect_common_container{
+        background-size: cover;
+    }
+} 
