@@ -335,7 +335,6 @@ body{
     top: 20%;
     left: 0;
     display: flex;
-    margin-top: 10px;
     /* align-items: center; */
     justify-content: center;
     z-index: 5;
