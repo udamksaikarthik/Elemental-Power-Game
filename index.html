@@ -11,12 +11,52 @@
     <div class="main_body_container">
 
         <div id="rules_container_div_id" class="rules_container_div">
+            <hr>
             <h3>Rules</h3>
+            <hr>
             <li>Fire is strong against Wind, but weak against Water</li>
             <li>Water is strong against Fire, but weak against Earth</li>
             <li>Wind is strong against Lightning, but weak against Fire</li>
             <li>Earth is strong against Water, but weak against Lightning</li>
             <li>Lightning is strong against Wind, but weak against Water</li>
+            <hr>
+            <h3>Points Card</h3>
+            <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <td>
+                            Winner Text
+                        </td>
+                        <td>
+                            User Score
+                        </td>
+                        <td>
+                            Computer Score
+                        </td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>You Won</td>
+                    <td>+1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Computer Won</td>
+                    <td>0</td>
+                    <td>+1</td>
+                </tr>
+                <tr>
+                    <td>Partial Damage</td>
+                    <td>+0.5</td>
+                    <td>+0.5</td>
+                </tr>
+                <tr>
+                    <td>Draw</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+            </table>
 
             <button id="rules_button_id" class="rules_exposed_slide rules_button" onclick="rulesSlider()">Close</button>
         </div>
