@@ -222,29 +222,29 @@ function playGame(){
             userScore++;
         }
         else if(computerChoice === 'Fire' && userChoice === 'Wind'){
-            console.log('You Won')
+            console.log('Computer Won')
             resultText = 'Computer Won!'
-            userScore++;
+            computerScore++;
         }
         else if(computerChoice === 'Wind' && userChoice === 'Lightning'){
-            console.log('You Won')
+            console.log('Computer Won')
             resultText = 'Computer Won!'
-            userScore++;
+            computerScore++;
         }
         else if(computerChoice === 'Lightning' && userChoice === 'Earth'){
-            console.log('You Won')
+            console.log('Computer Won')
             resultText = 'Computer Won!'
-            userScore++;
+            computerScore++;
         }
         else if(computerChoice === 'Earth' && userChoice === 'Water'){
-            console.log('You Won')
+            console.log('Computer Won')
             resultText = 'Computer Won!'
-            userScore++;
+            computerScore++;
         }
         else if(computerChoice === 'Water' && userChoice === 'Fire'){
-            console.log('You Won')
+            console.log('Computer Won')
             resultText = 'Computer Won!'
-            userScore++;
+            computerScore++;
         }
         else{
             console.log('Partial Damage')
