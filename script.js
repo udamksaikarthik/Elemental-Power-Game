@@ -1,6 +1,7 @@
 let userChoice = ''
 let userScore = 0
 let computerScore = 0
+let resultText = ''
 
 const image_game_icon_id = document.getElementById('image_game_icon_id')
 
@@ -78,7 +79,7 @@ function commonAnimateUserChoice(userSelectedChoice){
             user_selected_element_name_id.innerText = userSelectedChoice
             userChoice = userSelectedChoice
             break
-        case ('Lightining'):
+        case ('Lightning'):
             user_selected_element_image_id.classList.remove('choice_user_waves')
             user_selected_element_image_id.classList.remove('choice_user_wind')
             user_selected_element_image_id.classList.remove('choice_user_earth')
@@ -173,6 +174,10 @@ const user_score_id = document.getElementById('user_score_id')
 
 const computer_score_id = document.getElementById('computer_score_id')
 
+const result_winner_div_container_id = document.getElementById('result_winner_div_container_id')
+
+const round_winner_text_id = document.getElementById('round_winner_text_id')
+
 const computer_choices = ['Fire','Water','Wind','Earth','Lightning']
 
 let count = 0;
@@ -189,37 +194,74 @@ function playGame(){
         commonAnimateComputerChoice(computerChoice)
         if(userChoice === computerChoice){
             console.log('DRAW!')
+            resultText = 'Draw!'
         }
         else if(userChoice === 'Fire' && computerChoice === 'Wind'){
             console.log('You Won')
+            resultText = 'You Won!'
             userScore++;
         }
         else if(userChoice === 'Wind' && computerChoice === 'Lightning'){
             console.log('You Won')
+            resultText = 'You Won!'
             userScore++;
         }
         else if(userChoice === 'Lightning' && computerChoice === 'Earth'){
             console.log('You Won')
+            resultText = 'You Won!'
             userScore++;
         }
         else if(userChoice === 'Earth' && computerChoice === 'Water'){
             console.log('You Won')
+            resultText = 'You Won!'
             userScore++;
         }
         else if(userChoice === 'Water' && computerChoice === 'Fire'){
             console.log('You Won')
+            resultText = 'You Won!'
             userScore++;
-        }else{
-            console.log('Computer Won')
-            computerScore++
+        }
+        else if(computerChoice === 'Fire' && userChoice === 'Wind'){
+            console.log('You Won')
+            resultText = 'Computer Won!'
+            userScore++;
+        }
+        else if(computerChoice === 'Wind' && userChoice === 'Lightning'){
+            console.log('You Won')
+            resultText = 'Computer Won!'
+            userScore++;
+        }
+        else if(computerChoice === 'Lightning' && userChoice === 'Earth'){
+            console.log('You Won')
+            resultText = 'Computer Won!'
+            userScore++;
+        }
+        else if(computerChoice === 'Earth' && userChoice === 'Water'){
+            console.log('You Won')
+            resultText = 'Computer Won!'
+            userScore++;
+        }
+        else if(computerChoice === 'Water' && userChoice === 'Fire'){
+            console.log('You Won')
+            resultText = 'Computer Won!'
+            userScore++;
+        }
+        else{
+            console.log('Partial Damage')
+            resultText = 'Partial Damage!'
+            computerScore+= 0.5
+            userScore+=0.5
         }
         play_button_id.innerText = 'Play Again'
         user_score_id.innerText = userScore
         computer_score_id.innerText = computerScore
+        result_winner_div_container_id.classList.add('add')
+        round_winner_text_id.innerText = resultText
         count++;
     }else{
         removeUserChoice()
         removeComputerChoice()
+        result_winner_div_container_id.classList.remove('add')
         play_button_id.innerText = 'Play'
         count++;
     }

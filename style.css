@@ -526,6 +526,25 @@ body{
     top: 0;
     left: 0;
 }
+.result_winner_div_container{
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    top: 0;
+    left: 20%;
+    background-color: #EDF5E1;
+    transition: ease-in-out 0.5s;
+    transform: translateY(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.result_winner_div_container.add{
+    transform: translateY(0);
+}
+.result_winner_div_container h3{
+    text-align: center;
+}
 @media screen and (max-width: 500px){
     .choice_common_container h5{
         font-size: 0.6em;
