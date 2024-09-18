@@ -5,7 +5,8 @@
 *{
     box-sizing: border-box;
     margin: 0 auto;
-    font-family: "arigathoFont";
+    /* font-family: "arigathoFont"; */
+    font-family: sans-serif;
 }
 body{
     height: 100vh;
@@ -51,6 +52,7 @@ body{
     width: 100%;
     bottom: 0;
     z-index: 20;
+    font-weight: bold;
 }
 .icon_container{
     position: absolute;
@@ -64,11 +66,12 @@ body{
 .image_game_icon{
     position: absolute;
     height: 90%;
-    width: 100%;
+    width: 90%;
     border-radius: 50%;
 }
 .title_container{
     position: absolute;
+    font-weight: bold;
     height: 100%;
     width: 50%;
     left: 50%;
@@ -88,6 +91,7 @@ body{
 .rules_button{
     background-color: #F76C6C;
     left: 0;
+    font-weight: bold;
     height: 95%;
     width: 100%;
     border: none;
