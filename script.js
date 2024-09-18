@@ -229,28 +229,28 @@ function playGame(){
                 userScore++;
             }
             else if(computerChoice === 'Fire' && userChoice === 'Wind'){
-                console.log('Computer Won')
-                resultText = 'Computer Won!'
+                console.log('Robot Won')
+                resultText = 'Robot Won!'
                 computerScore++;
             }
             else if(computerChoice === 'Wind' && userChoice === 'Lightning'){
-                console.log('Computer Won')
-                resultText = 'Computer Won!'
+                console.log('Robot Won')
+                resultText = 'Robot Won!'
                 computerScore++;
             }
             else if(computerChoice === 'Lightning' && userChoice === 'Earth'){
-                console.log('Computer Won')
-                resultText = 'Computer Won!'
+                console.log('Robot Won')
+                resultText = 'Robot Won!'
                 computerScore++;
             }
             else if(computerChoice === 'Earth' && userChoice === 'Water'){
-                console.log('Computer Won')
-                resultText = 'Computer Won!'
+                console.log('Robot Won')
+                resultText = 'Robot Won!'
                 computerScore++;
             }
             else if(computerChoice === 'Water' && userChoice === 'Fire'){
-                console.log('Computer Won')
-                resultText = 'Computer Won!'
+                console.log('Robot Won')
+                resultText = 'Robot Won!'
                 computerScore++;
             }
             else{
